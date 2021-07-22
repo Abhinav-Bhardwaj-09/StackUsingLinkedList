@@ -25,5 +25,26 @@ public class Stack {
     }
 
 
+    public void push(int data) {
+        Node newNode = new Node(data);
+
+        if(isEmpty()) {
+            top = newNode;
+            return;
+        }
+
+        newNode.setNext(top);
+        top = newNode;
+    }
+
+    public void peek () {
+        if(isEmpty()) {
+            System.out.println("Your stack is empty.");
+            return;
+        }
+        System.out.println("Element at the top of the stack: " + top.getData());
+    }
+
+
 
 }
