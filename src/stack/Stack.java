@@ -45,6 +45,15 @@ public class Stack {
         System.out.println("Element at the top of the stack: " + top.getData());
     }
 
+    public void pop () {
+        if(isEmpty()) {
+            System.out.println("Your stack is empty.");
+            return;
+        }
+        Node tempTop = top.getNext();
+        top = tempTop;
+    }
+
 
 
 }
