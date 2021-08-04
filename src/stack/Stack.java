@@ -10,7 +10,7 @@ import node.Node;
  */
 
 public class Stack {
-    private Node top;
+    private Node topNode;
     private int length;
 
 
@@ -34,12 +34,12 @@ public class Stack {
         length++;
 
         if(isEmpty()) {
-            top = newNode;
+            topNode = newNode;
             return;
         }
 
-        newNode.setNextNode(top);
-        top = newNode;
+        newNode.setNextNode(topNode);
+        topNode = newNode;
     }
 
 
@@ -50,7 +50,7 @@ public class Stack {
             System.out.println("Your stack is empty.");
             return;
         }
-        System.out.println("Element at the top of the stack: " + top.getData());
+        System.out.println("Element at the top of the stack: " + topNode.getData());
     }
 
 
@@ -62,8 +62,8 @@ public class Stack {
             return;
         }
 
-        Node tempTop = top.getNextNode();
-        top = tempTop;
+        Node tempTopNode = topNode.getNextNode();
+        topNode = tempTopNode;
         length--;
     }
 }
