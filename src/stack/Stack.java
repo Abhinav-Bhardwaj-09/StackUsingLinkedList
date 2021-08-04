@@ -66,4 +66,29 @@ public class Stack {
         topNode = tempTopNode;
         length--;
     }
+
+
+
+    // To display and pop every element
+    public void popAll () {
+        if(isEmpty()) {
+            System.out.println("Your stack is already empty.");
+            return;
+        }
+        else if(length == 1) {
+            System.out.println("(Top) " + topNode + " (Bottom)");
+            length--;
+            topNode = null;
+        }
+
+        Node currentNode = topNode;
+        System.out.print("(Top) ");
+        while (currentNode != null) {
+            System.out.print("--> " + currentNode);
+            currentNode = currentNode.getNextNode();
+        }
+        System.out.println(" (Botttom)");
+        topNode = null;
+        length = 0;
+    }
 }
