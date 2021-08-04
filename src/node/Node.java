@@ -9,11 +9,11 @@ package node;
 
 public class Node {
     private int data;
-    private Node next;
+    private Node nextNode;
 
     public Node(int data) {
         this.data = data;
-        this.next = null;
+        this.nextNode = null;
     }
 
     public int getData() {
@@ -24,11 +24,11 @@ public class Node {
         this.data = data;
     }
 
-    public Node getNext() {
-        return next;
+    public Node getNextNode() {
+        return nextNode;
     }
 
-    public void setNext(Node next) {
-        this.next = next;
+    public void setNextNode(Node nextNode) {
+        this.nextNode = nextNode;
     }
 }
