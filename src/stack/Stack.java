@@ -38,7 +38,7 @@ public class Stack {
             return;
         }
 
-        newNode.setNext(top);
+        newNode.setNextNode(top);
         top = newNode;
     }
 
@@ -58,13 +58,12 @@ public class Stack {
     public void pop () {
 
         if(isEmpty()) {
-            System.out.println("Your stack is empty.");
+            System.out.println("Your stack is already empty.");
             return;
         }
 
-        Node tempTop = top.getNext();
+        Node tempTop = top.getNextNode();
         top = tempTop;
         length--;
     }
-
 }
