@@ -79,6 +79,7 @@ public class Stack {
             System.out.println("(Top) " + topNode + " (Bottom)");
             length--;
             topNode = null;
+            return;
         }
 
         Node currentNode = topNode;
